@@ -6,11 +6,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   const setCookie = (name, value) => {
     document.cookie = `${name}=${value}`;
-
-
   };
 
-  setCookie('monster', 'rabbit');
+   setCookie('monster', 'rabbit');
 
 
+  const getCookie = () => {
+    let cookies = document.cookie
+  let list = cookies.split('; ')
+  return list
+  }
+  console.log(getCookie())
 });
